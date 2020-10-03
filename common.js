@@ -1,3 +1,5 @@
+const $ = (selector) => document.querySelector(selector);
+
 if (window.location.protocol === 'http:') {
   const requireHTTPS = $('#requireHTTPS');
   const link = requireHTTPS.querySelector('a');
@@ -7,6 +9,5 @@ if (window.location.protocol === 'http:') {
 }
 
 if ('serviceWorker' in navigator) {
-  console.log('👍', 'navigator.serviceWorker is supported');
   navigator.serviceWorker.register('/service-worker.js');
 }
