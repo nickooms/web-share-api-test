@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/style.css" />
-    <script src="/common.js" defer></script>
     <link rel="manifest" href="/manifest.json" />
+    <script src="/common.js" defer></script>
     <meta name="theme-color" content="#4a148c" />
   </head>
   <body>
@@ -29,11 +29,11 @@
     </div>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('href').textContent = window.location.href;
-        const parsedUrl = new URL(window.location);
-        document.getElementById('title').textContent = parsedUrl.searchParams.get('title');
-        document.getElementById('text').textContent = parsedUrl.searchParams.get('text');
-        document.getElementById('url').textContent = parsedUrl.searchParams.get('url');
+        const { searchParams } = new URL(location);
+        $('#href').textContent = location.href;
+        $('#title').textContent = searchParams.get('title');
+        $('#text').textContent = searchParams.get('text');
+        $('#url').textContent = searchParams.get('url');
       });
     </script>
   </body>
