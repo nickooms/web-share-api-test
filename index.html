@@ -5,11 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
-    <!-- import the webpage's javascript file -->
     <script src="/share.js" defer></script>
     <script src="/common.js" defer></script>
     <link rel="manifest" href="/manifest.json" />
@@ -21,16 +17,13 @@
       <b>STOP!</b> This page <b>must</b> be served over HTTPS. Please
       <a>reload this page via HTTPS</a>.
     </p>
-
     <p>
       The Web Share API, allows sites to share links and text to other apps via the system provided
       share picker.
     </p>
-
     <p id="notSupported">
       <b>Sorry!</b> This browser doesn't support the Web Share API, which required for this demo.
     </p>
-
     <pre>
 const shareOpts = {
   title: 'Jabberwocky',
@@ -38,13 +31,10 @@ const shareOpts = {
   url: 'https://en.wikipedia.org/wiki/Jabberwocky',
 };
 navigator.share(shareOpts);
-</pre
-    >
-
+    </pre>
     <p>
       <button type="button" id="butShare" disabled>Share</button>
     </p>
-
     <div id="divResult"></div>
   </body>
 </html>

@@ -1,9 +1,11 @@
+const $ = (selector) => document.querySelector(selector);
+
 const supported = 'share' in navigator;
-const butShare = document.getElementById('butShare');
-const divResult = document.getElementById('divResult');
+const butShare = $('#butShare');
+const divResult = $('#divResult');
 
 if (supported) {
-  const divNotSupported = document.getElementById('notSupported');
+  const divNotSupported = $('#notSupported');
   divNotSupported.classList.toggle('hidden', true);
   butShare.removeAttribute('disabled');
   butShare.addEventListener('click', (e) => {
